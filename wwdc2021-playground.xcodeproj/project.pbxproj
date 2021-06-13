@@ -13,6 +13,9 @@
 		A402FDE72675AF34005D97FC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A402FDE62675AF34005D97FC /* Preview Assets.xcassets */; };
 		A402FDF12675AF34005D97FC /* wwdc2021_playgroundTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A402FDF02675AF34005D97FC /* wwdc2021_playgroundTests.swift */; };
 		A402FDFB2675AF34005D97FC /* wwdc2021_playgroundUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A402FDFA2675AF34005D97FC /* wwdc2021_playgroundUITests.swift */; };
+		A402FE082675B000005D97FC /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A402FE072675B000005D97FC /* ImageDownloader.swift */; };
+		A402FE0A2675B0E2005D97FC /* ImageDownloaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A402FE092675B0E2005D97FC /* ImageDownloaderTests.swift */; };
+		A402FE0E2675C01D005D97FC /* ImageURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A402FE0D2675C01D005D97FC /* ImageURLProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +45,9 @@
 		A402FDF02675AF34005D97FC /* wwdc2021_playgroundTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wwdc2021_playgroundTests.swift; sourceTree = "<group>"; };
 		A402FDF62675AF34005D97FC /* wwdc2021-playgroundUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "wwdc2021-playgroundUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A402FDFA2675AF34005D97FC /* wwdc2021_playgroundUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wwdc2021_playgroundUITests.swift; sourceTree = "<group>"; };
+		A402FE072675B000005D97FC /* ImageDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
+		A402FE092675B0E2005D97FC /* ImageDownloaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloaderTests.swift; sourceTree = "<group>"; };
+		A402FE0D2675C01D005D97FC /* ImageURLProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageURLProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +98,7 @@
 		A402FDDE2675AF33005D97FC /* wwdc2021-playground */ = {
 			isa = PBXGroup;
 			children = (
+				A402FE0C2675C00A005D97FC /* Actor */,
 				A402FDDF2675AF33005D97FC /* wwdc2021_playgroundApp.swift */,
 				A402FDE12675AF33005D97FC /* ContentView.swift */,
 				A402FDE32675AF34005D97FC /* Assets.xcassets */,
@@ -111,6 +118,7 @@
 		A402FDEF2675AF34005D97FC /* wwdc2021-playgroundTests */ = {
 			isa = PBXGroup;
 			children = (
+				A402FE0B2675BFFC005D97FC /* Actor */,
 				A402FDF02675AF34005D97FC /* wwdc2021_playgroundTests.swift */,
 			);
 			path = "wwdc2021-playgroundTests";
@@ -122,6 +130,23 @@
 				A402FDFA2675AF34005D97FC /* wwdc2021_playgroundUITests.swift */,
 			);
 			path = "wwdc2021-playgroundUITests";
+			sourceTree = "<group>";
+		};
+		A402FE0B2675BFFC005D97FC /* Actor */ = {
+			isa = PBXGroup;
+			children = (
+				A402FE092675B0E2005D97FC /* ImageDownloaderTests.swift */,
+				A402FE0D2675C01D005D97FC /* ImageURLProtocol.swift */,
+			);
+			path = Actor;
+			sourceTree = "<group>";
+		};
+		A402FE0C2675C00A005D97FC /* Actor */ = {
+			isa = PBXGroup;
+			children = (
+				A402FE072675B000005D97FC /* ImageDownloader.swift */,
+			);
+			path = Actor;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -255,6 +280,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A402FDE22675AF33005D97FC /* ContentView.swift in Sources */,
+				A402FE082675B000005D97FC /* ImageDownloader.swift in Sources */,
 				A402FDE02675AF33005D97FC /* wwdc2021_playgroundApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -263,7 +289,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A402FE0A2675B0E2005D97FC /* ImageDownloaderTests.swift in Sources */,
 				A402FDF12675AF34005D97FC /* wwdc2021_playgroundTests.swift in Sources */,
+				A402FE0E2675C01D005D97FC /* ImageURLProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -423,7 +451,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -453,7 +481,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -476,7 +504,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = TLMA6V33AH;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -501,7 +529,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = TLMA6V33AH;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
